@@ -42,6 +42,11 @@ app.use("/auth", (req, res) => {
   res.send(sha256.sha256(otp));
 });
 
+app.use("/", (req, res) => {
+    res.send("Hello, Fyar World!!");
+  });
+  
+
 // Server
 app.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
