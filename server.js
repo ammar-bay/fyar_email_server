@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 transporter.verify().then(console.log).catch(console.error);
 
 //Routes
-app.use("/", (req, res) => {
+app.use("/auth", (req, res) => {
   const otp = Math.random().toString().substring(2, 6);
   const email = req.body.email;
   transporter
